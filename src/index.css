@@ -1,0 +1,29 @@
+html {
+  height: 100vh;
+  background-color: #b7b7b7;
+}
+
+body {
+  margin: 0;
+}
+
+.end-action {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10000001;
+}
+
+.input-group {
+  display: grid;
+  margin-top: 1rem;
+  max-width: 30rem;
+}
+
+.input-group > * {
+  margin: 1rem;
+}
+
+.input-group .short-input {
+  max-width: 7rem;
+}
