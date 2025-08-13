@@ -1,6 +1,6 @@
 import { Container, Button, Tabs, Text, Flex, Grid, ScrollArea, SimpleGrid, Image } from '@mantine/core';
-import productItem from "../productList";
 import { theme, utilityClasses } from "../theme";
+import featureItem from '@/featureList';
 
 function customerDataPlatform(): JSX.Element {
     return(
@@ -39,11 +39,11 @@ function customerDataPlatform(): JSX.Element {
                 <Grid.Col span={3}>                          
                   <ScrollArea h={582} w={371} style={utilityClasses.contentCard}>
                     <SimpleGrid spacing="xs" verticalSpacing="md">
-                      {productItem()}
-                      {productItem()}
-                      {productItem()}
-                      {productItem()}
-                      {productItem()}
+                      {featureItem()}
+                      {featureItem()}
+                      {featureItem()}
+                      {featureItem()}
+                      {featureItem()}
                     </SimpleGrid>
                   </ScrollArea>
                 </Grid.Col>

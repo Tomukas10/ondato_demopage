@@ -1,7 +1,7 @@
 
-import { useOndatoSdk } from '@/sdk';
 import { Container, Button, Text,} from '@mantine/core';
 import { Image } from '@mantine/core';
+
 const sdkID = '6267fcf5-fe32-4235-bc77-9e0d5ee326f0';
 
 import {
@@ -23,9 +23,7 @@ import type {
 
 
 
-const productItem = () => {
-  const { runSdk } = useOndatoSdk(sdkID, "en-GB");
-
+const featureItem = () => {
   return(
     <Container h={116} w={607} style={{ padding: '0', display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
       <Image src="src/bg-placeholder.jpg" h={90} w={90} style={{marginTop:'5px', borderRadius: '8px' }} />
@@ -41,8 +39,8 @@ const productItem = () => {
         </Container>
         
         <Container h={32} w={222} style={{gap: '8px',  display: 'flex', alignSelf: 'flex-start', margin:'0', padding:'0'}}>
-          <Button h={32} w={89} onClick={runSdk} style={{ backgroundColor: '#d1f6ac', color: 'black', fontSize: '12px', fontWeight: 400 }}>
-            Try it out 
+          <Button h={32} w={69} style={{ backgroundColor: '#d1f6ac', color: 'black', fontSize: '12px', fontWeight: 400 }}>
+            Open 
           </Button>
           <Button h={32} w={125} onClick={() => window.open('https://ondato.atlassian.net/wiki/spaces/PUB/pages/3016392748/Web+SDK+integration', '_blank')} variant="default" style={{ fontSize: '12px', fontWeight: 400, gap: '6px' }}>
             Documentation 
@@ -54,4 +52,4 @@ const productItem = () => {
   );
 };
 
-export default productItem;
+export default featureItem;

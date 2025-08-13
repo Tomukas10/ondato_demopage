@@ -76,7 +76,7 @@ function idVerification(): JSX.Element {
                   <ListItem>Illustrations</ListItem>
                 </List>
                 
-                <Button size="xs" variant="default" style={{ marginBottom: '24px' }}>
+                <Button size="xs" variant="default" style={{ marginBottom: '24px', marginTop:'12px' }}>
                   More information
                 </Button>
                 

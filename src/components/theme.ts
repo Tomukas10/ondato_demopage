@@ -274,7 +274,8 @@ export const utilityClasses = {
     padding: '12px 24px 12px 24px',
     backgroundColor: '#F9FAFC',
     borderRadius: '8px',
-    marginBottom: '12px',   
+    marginBottom: '12px', 
+      
   },
 
   accentButton: {
@@ -299,5 +300,12 @@ export const utilityClasses = {
     fontSize: '14px',
     fontWeight: 400,
     height: '32px',
+  },
+
+  grayButtons: {
+    backgroundColor: '#B4B4B440',
+    color: 'black',
+    fontSize: '12px',
+    fontWeight: 400,
   },
 };
