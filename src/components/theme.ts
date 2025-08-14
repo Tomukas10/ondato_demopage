@@ -1,4 +1,4 @@
-import { MantineTheme, createTheme, rem, MantineThemeOverride } from '@mantine/core';
+import { createTheme, rem } from '@mantine/core';
 
 export const theme = createTheme({
   // Typography
@@ -19,7 +19,7 @@ export const theme = createTheme({
     lg: rem(18),
     xl: rem(20),
   },
-  
+
   // Color palette
   colors: {
     // Custom brand colors
@@ -138,7 +138,6 @@ export const theme = createTheme({
       defaultProps: {
         size: 'sm',
         radius: 'md',
-        
       },
       styles: () => ({
         root: {
@@ -147,7 +146,7 @@ export const theme = createTheme({
             height: rem(32),
             fontSize: rem(12),
             fontWeight: 400,
-            color: '#B4B4B440'
+            color: '#B4B4B440',
           },
         },
       }),
@@ -231,28 +230,29 @@ export const theme = createTheme({
     lg: '74em',
     xl: '90em',
   },
-})
+});
 
 // Utility classes for common patterns (use these as CSS classes or inline styles)
 export const utilityClasses = {
   contentCard: {
     backgroundColor: '#F9FAFC',
     borderRadius: '8px',
-    padding: '24px',  
+    padding: '24px',
+    marginTop:'12px'
   },
-  
+
   infoCard: {
     backgroundColor: '#B4B4B440',
     borderRadius: '8px',
     padding: '24px',
   },
-  
+
   sectionTitle: {
     fontSize: '20px',
     fontWeight: 'bold',
     marginBottom: '4px',
   },
-  
+
   sectionSubtitle: {
     fontSize: '18px',
     fontWeight: 600,
@@ -260,22 +260,21 @@ export const utilityClasses = {
     lineHeight: 1,
     marginBottom: '12px',
   },
-  
+
   bodyText: {
     fontSize: '12px',
     fontWeight: 400,
     fontFamily: 'Inter Variable, sans-serif',
     maxWidth: '690px',
   },
-  
+
   featureContainer: {
     height: '153px',
     width: '988px',
     padding: '12px 24px 12px 24px',
     backgroundColor: '#F9FAFC',
     borderRadius: '8px',
-    marginBottom: '12px', 
-      
+    marginBottom: '12px',
   },
 
   accentButton: {

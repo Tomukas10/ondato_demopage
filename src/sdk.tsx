@@ -1,42 +1,39 @@
-import { useState, useCallback } from "react";
+import { useCallback } from 'react';
 import {
-  SdkLanguage,
   load,
+  SdkLanguage,
   SdkMode,
-} from "@ondato-public/idv-sdk";
+} from '@ondato-public/idv-sdk';
 
-import type {
-  SdkLoadResult,
-  SdkOnSuccessResult,
-  SdkOnFailureResult,
-  SdkOnCloseResult,
-} from "@ondato-public/idv-sdk";
-
-export function useOndatoSdk(onAgeSetupId: string, language: string = "") {
-  const [sdkOnAge, setSdkOnAge] = useState<SdkLoadResult | null>(null);
+export function useOndatoSdk(
+  onAgeSetupId: string,
+  language: string = '',
+  onSuccessOpen: () => void,
+  onFailureOpen: () => void,
+  onClosedOpen: () => void
+) {
 
   const runSdk = useCallback(async () => {
     try {
       const onAge = load({ mode: SdkMode.Sandbox });
-      setSdkOnAge(onAge);
+      onAge;
 
       await onAge.onAge.begin({
         onAgeSetupId: onAgeSetupId.trim(),
         language: language.trim() as SdkLanguage,
-        onSuccess: (props: SdkOnSuccessResult) => {
-          console.log("onSuccess", props);
-          alert("SDK verification success!");
+        onSuccess: () => {
+          onSuccessOpen();
         },
-        onFailure: (props: SdkOnFailureResult) => {
-          console.error("onFailure", props);
-          alert("SDK verification failed!");
+        onFailure: (prop) => {
+          console.log("helllo", prop)
+          onFailureOpen();
         },
-        onClose: (props: SdkOnCloseResult) => {
-          console.log("onClose", props);
+        onClose: () => {
+          onClosedOpen();
         },
       });
     } catch (error) {
-      console.error("Ondato SDK error", error);
+      console.error('Ondato SDK error', error);
     }
   }, [onAgeSetupId, language]);
 
