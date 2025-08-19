@@ -1,6 +1,7 @@
 import { Button, Container, Image, Modal, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useOndatoSdk } from '@/sdk';
+import { ModalsProvider } from '@mantine/modals';
 
 const sdkID = '6267fcf5-fe32-4235-bc77-9e0d5ee326f0';
 
@@ -8,6 +9,7 @@ const ProductItem = ({ isActive }: { isActive: boolean }) => {
   const [successOpened, { open: openSuccess, close: closeSuccess }] = useDisclosure(false);
   const [failureOpened, { open: openFailure, close: closeFailure }] = useDisclosure(false);
   const [closedOpened, { open: openClosed, close: closeClosed }] = useDisclosure(false);
+
 
   const { runSdk } = useOndatoSdk(sdkID, 'en-GB', openSuccess, openFailure, openClosed);
 
@@ -31,11 +33,11 @@ const ProductItem = ({ isActive }: { isActive: boolean }) => {
   return (
     <>
       <Modal opened={successOpened} onClose={closeSuccess} title="Verification Successful">
-        <Text>Your verification was completed successfully!</Text>
+        <Text>Your verification {} was completed successfully!</Text>
       </Modal>
 
       <Modal opened={failureOpened} onClose={closeFailure} title="Verification Failed">
-        <Text>Unfortunately, we couldn’t verify your identity. Please try again.</Text>
+        <Text>Your verification {} Please try again.</Text>
       </Modal>
 
       <Modal opened={closedOpened} onClose={closeClosed} title="Verification Closed">

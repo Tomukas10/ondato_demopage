@@ -141,8 +141,7 @@ export const theme = createTheme({
       },
       styles: () => ({
         root: {
-          fontFamily: 'Inter Variable, sans-serif',
-          '&[data-size="xs"]': {
+          fontFamily: {
             height: rem(32),
             fontSize: rem(12),
             fontWeight: 400,

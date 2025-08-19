@@ -1,0 +1,19 @@
+.list {
+  &::before {
+    border-width: 1px;
+    border-top: 0px solid transparent;
+  }
+}
+
+.tab {
+  padding: rem(8px);
+
+  &:active,
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.tabLabel {
+  font-size: var(--mantine-font-size-md);
+}

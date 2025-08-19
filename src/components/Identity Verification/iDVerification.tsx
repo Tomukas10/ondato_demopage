@@ -12,6 +12,7 @@ import {
 } from '@mantine/core';
 import ProductItem from '../productList';
 import { utilityClasses } from '../Theme';
+import '../Theme/accordion.module.css';
 
 function idVerification(): JSX.Element {
   return (
@@ -42,7 +43,7 @@ function idVerification(): JSX.Element {
           </Text>
           <ScrollArea h={582} w={655} style={utilityClasses.contentCard}>
             <SimpleGrid spacing="xs" verticalSpacing="md">
-              <ProductItem isActive={true} />
+              <ProductItem isActive />
               <ProductItem isActive={false} />
               <ProductItem isActive={false} />
               <ProductItem isActive={false} />

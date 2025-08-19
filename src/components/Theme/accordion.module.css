@@ -1,0 +1,28 @@
+.root {
+  &[data-variant='clean'] {
+    .control {
+      color: #94a3b5;
+      font-size: 14px;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: flex-end;
+      margin-bottom: 4px;
+
+      .label {
+        padding-top: 0;
+        padding-bottom: 0px;
+        flex: none;
+        padding-right: 12px;
+      }
+    }
+
+    .panel {
+      background-color: #f9fafc;
+      border-radius: rem(4px);
+    }
+
+    .content {
+      padding: 16px;
+    }
+  }
+}

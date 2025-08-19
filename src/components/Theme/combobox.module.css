@@ -1,0 +1,20 @@
+.dropdown {
+  padding: 0;
+}
+
+.option {
+  border-bottom: 1px solid #dae1e8;
+  border-radius: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &::focus {
+    background-color: red;
+  }
+
+  &[data-combobox-active='true'] {
+    background-color: #dae1e8;
+  }
+}

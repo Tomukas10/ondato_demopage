@@ -1,0 +1,5 @@
+.root {
+  &[data-variant='ghost'] {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,14 @@
+.dropdown {
+  padding: 0;
+}
+
+.option {
+  border-radius: 0;
+  font-size: 14px;
+  padding: 12px 16px;
+
+  &[data-checked='true'],
+  &:hover {
+    background-color: #dae1e8;
+  }
+}

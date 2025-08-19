@@ -14,7 +14,8 @@ import {
 import businessintelligence from './components/BusinessIntelligence/BusinessIntelligence';
 import customerDataPlatform from './components/CustomerDataPlatform/CustomerDataPlatform';
 import idVerificationTab from './components/Identity Verification/iDVerification';
-import { theme, utilityClasses } from './components/Theme';
+//import { themeV7 } from './components/Theme/themeV7';
+import { theme } from './components/Theme'
 
 export const AppNew = memo((): ReactElement => {
   // #############################################################################
@@ -73,7 +74,7 @@ export const AppNew = memo((): ReactElement => {
                   fontFamily: 'Inter Variable',
                   letterSpacing: '0%',
                   lineHeight: '120%',
-                  ...utilityClasses.contactButton,
+                  ...Button
                 }}
               >
                 Contact us
@@ -127,7 +128,7 @@ export const AppNew = memo((): ReactElement => {
   // #############################################################################
 
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={{ ...theme, components: {} }}>
       <DemoPage />
     </MantineProvider>
   );

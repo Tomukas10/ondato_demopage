@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { modals } from '@mantine/modals';
 import {
   load,
   SdkLanguage,
@@ -21,16 +22,31 @@ export function useOndatoSdk(
       await onAge.onAge.begin({
         onAgeSetupId: onAgeSetupId.trim(),
         language: language.trim() as SdkLanguage,
-        onSuccess: () => {
-          onSuccessOpen();
+        onSuccess: (result) => {
+          modals.open({
+            title: 'Verification Successful',
+            children: (
+              <p>Your verification {result.id} was successful</p>
+            ),
+          });
         },
-        onFailure: (prop) => {
-          console.log("helllo", prop)
-          onFailureOpen();
+        onFailure: (result) => {
+          modals.open({
+            title: 'Verification Failed',
+            children: (
+              <p>Your verification {result.id} was unsuccessful</p>
+            ),
+          });
         },
-        onClose: () => {
-          onClosedOpen();
+        onClose: (result) => {
+          modals.open({
+            title: 'Verification Closed',
+            children: (
+              <p>Your verification {result.id} was closed</p>
+            ),
+          });
         },
+        openModal: () => {},
       });
     } catch (error) {
       console.error('Ondato SDK error', error);

@@ -1,0 +1,47 @@
+.root {
+  --ai-size-sm: rem(24px);
+  --ai-size-md: rem(32px);
+  --ai-size-lg: rem(40px);
+
+  &[data-variant='outline'] {
+    background-color: #fff;
+    border: 1px solid #b7c2cf;
+    color: #738193;
+
+    &:hover {
+      background-color: #f3f5f8;
+      border: 1px solid #b7c2cf;
+    }
+
+    &:active {
+      background-color: #e6ebf0;
+      border: 1px solid #b7c2cf;
+    }
+  }
+
+  &[data-variant='filled'] {
+    background-color: #cafc81;
+    border-color: transparent;
+    color: #2b2b2b;
+
+    &:hover {
+      background-color: #ade374;
+    }
+
+    &:active {
+      background-color: #8fc967;
+    }
+  }
+
+  &[data-variant='transparent'] {
+    color: #2b2b2b;
+
+    &:hover {
+      background-color: #f3f5f8;
+    }
+
+    &:active {
+      background-color: #e6ebf0;
+    }
+  }
+}
