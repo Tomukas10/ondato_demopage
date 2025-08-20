@@ -1,57 +1,40 @@
 import { useCallback } from 'react';
-import { modals } from '@mantine/modals';
-import {
-  load,
-  SdkLanguage,
-  SdkMode,
-} from '@ondato-public/idv-sdk';
+import { load, SdkLanguage, SdkMode } from '@ondato-public/idv-sdk';
+
+export interface VerificationResult {
+  id: string;
+}
 
 export function useOndatoSdk(
   onAgeSetupId: string,
   language: string = '',
-  onSuccessOpen: () => void,
-  onFailureOpen: () => void,
-  onClosedOpen: () => void
+  onSuccessOpen: (result: VerificationResult) => void,
+  onFailureOpen: (result: VerificationResult) => void,
+  onClosedOpen: (result: VerificationResult) => void
 ) {
-
   const runSdk = useCallback(async () => {
     try {
       const onAge = load({ mode: SdkMode.Sandbox });
-      onAge;
 
       await onAge.onAge.begin({
         onAgeSetupId: onAgeSetupId.trim(),
         language: language.trim() as SdkLanguage,
-        onSuccess: (result) => {
-          modals.open({
-            title: 'Verification Successful',
-            children: (
-              <p>Your verification {result.id} was successful</p>
-            ),
-          });
+        onSuccess: (result: VerificationResult) => {
+          onSuccessOpen(result);
         },
-        onFailure: (result) => {
-          modals.open({
-            title: 'Verification Failed',
-            children: (
-              <p>Your verification {result.id} was unsuccessful</p>
-            ),
-          });
+        onFailure: (result: VerificationResult) => {
+          onFailureOpen(result);
         },
-        onClose: (result) => {
-          modals.open({
-            title: 'Verification Closed',
-            children: (
-              <p>Your verification {result.id} was closed</p>
-            ),
-          });
+        onClose: (result: VerificationResult) => {
+          onClosedOpen(result);
         },
         openModal: () => {},
       });
     } catch (error) {
       console.error('Ondato SDK error', error);
+      onFailureOpen({ id: 'error' });
     }
-  }, [onAgeSetupId, language]);
+  }, [onAgeSetupId, language, onSuccessOpen, onFailureOpen, onClosedOpen]);
 
   return { runSdk };
 }

@@ -10,7 +10,6 @@ import {
   Text,
 } from '@mantine/core';
 import featureItem from '@/featureList';
-import { utilityClasses } from '../Theme';
 
 function customerDataPlatform(): JSX.Element {
   return (
@@ -20,21 +19,33 @@ function customerDataPlatform(): JSX.Element {
       h={734}
       style={{ padding: '12px 24px 12px 24px' }}
     >
-      <Flex align="center">
+      <Flex align="center" style={{ gap: '100px' }}>
         <Container w={677} h={58} p={0} m={0}>
-          <Text style={utilityClasses.sectionTitle}>Ondao OS - Customer data platform</Text>
-          <Text style={utilityClasses.bodyText}>
+          <Text
+            style={{
+              fontFamily: 'Inter Variable',
+              fontWeight: '600',
+              fontStyle: 'SemiBold',
+              fontSize: '20px',
+              lineHeight: ' 100%',
+              letterSpacing: '0%',
+            }}
+          >
+            Ondao OS - Customer data platform
+          </Text>
+          <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </Text>
         </Container>
 
-        <Button
-          w={222}
-          h={41}
-          style={{ marginLeft: '89px', marginTop: '28px', ...utilityClasses.dataButton }}
-        >
+        <Button w={222} h={41} style={{ float: 'right', padding:'12px 16px 12px 16px',  fontFamily: 'Inter Variable',
+              fontWeight: '400',
+              fontStyle: 'SemiBold',
+              fontSize: '14px',
+              lineHeight: ' 120%',
+              letterSpacing: '0%',  }}>
           Check out identification data
         </Button>
       </Flex>
@@ -48,11 +59,11 @@ function customerDataPlatform(): JSX.Element {
         </Grid.Col>
 
         <Grid.Col span={2} style={{ borderRadius: '8px', padding: '24px' }}>
-          <Text style={utilityClasses.sectionSubtitle}>Feature list</Text>
+          <Text>Feature list</Text>
 
           <Grid w={371} h={582}>
             <Grid.Col span={3}>
-              <ScrollArea h={582} w={371} style={utilityClasses.contentCard}>
+              <ScrollArea h={582} w={371}>
                 <SimpleGrid spacing="xs" verticalSpacing="md">
                   {featureItem()}
                   {featureItem()}

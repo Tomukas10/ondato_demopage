@@ -1,5 +1,6 @@
 import { memo, ReactElement } from 'react';
 import { IconMessageCircle, IconPhoto, IconSettings } from '@tabler/icons-react';
+import { I18nextProvider } from 'react-i18next';
 import {
   AppShell,
   Box,
@@ -14,8 +15,8 @@ import {
 import businessintelligence from './components/BusinessIntelligence/BusinessIntelligence';
 import customerDataPlatform from './components/CustomerDataPlatform/CustomerDataPlatform';
 import idVerificationTab from './components/Identity Verification/iDVerification';
-//import { themeV7 } from './components/Theme/themeV7';
-import { theme } from './components/Theme'
+import { themeV7 } from './components/Theme/themeV7';
+import i18n from './translations';
 
 export const AppNew = memo((): ReactElement => {
   // #############################################################################
@@ -37,14 +38,12 @@ export const AppNew = memo((): ReactElement => {
             minHeight: '840px',
             minWidth: '1042px',
             display: 'flex',
-            margin: '12px 208px 48px 190px',
+            margin: '12px 300px 48px 190px',
             alignItems: 'center',
             justifyContent: 'center',
           }}
         >
-          {/* Main container - centered */}
           <Container w={1042} h={840} style={{ padding: '0' }}>
-            {/* Header with logo and contact button */}
             <Flex style={{ alignItems: 'center' }} w={1042} h={41} justify="space-between">
               <Flex w={300} h={29} gap={28} style={{ alignItems: 'center' }}>
                 <Image w={135} h={29} src="src/assets/Ondato_logo.png" alt="Ondato Logo" />
@@ -63,22 +62,7 @@ export const AppNew = memo((): ReactElement => {
                   Sales platform
                 </Text>
               </Flex>
-              <Button
-                w={104}
-                h={41}
-                size="lg"
-                style={{
-                  gap: '8px',
-                  padding: '12px 16px 12px 16px',
-                  fontStyle: 'SemiBold',
-                  fontFamily: 'Inter Variable',
-                  letterSpacing: '0%',
-                  lineHeight: '120%',
-                  ...Button
-                }}
-              >
-                Contact us
-              </Button>
+              <Button style={{ background: '#B4B4B440' }}>Contact us</Button>
             </Flex>
 
             {/* Tabs container */}
@@ -128,8 +112,10 @@ export const AppNew = memo((): ReactElement => {
   // #############################################################################
 
   return (
-    <MantineProvider theme={{ ...theme, components: {} }}>
-      <DemoPage />
-    </MantineProvider>
+    <I18nextProvider i18n={i18n}>
+      <MantineProvider theme={themeV7}>
+        <DemoPage />
+      </MantineProvider>
+    </I18nextProvider>
   );
 });

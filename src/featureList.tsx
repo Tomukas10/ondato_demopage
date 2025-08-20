@@ -53,7 +53,6 @@ const featureItem = () => {
             h={32}
             w={69}
             style={{
-              backgroundColor: '#d1f6ac',
               color: 'black',
               fontSize: '12px',
               fontWeight: 400,

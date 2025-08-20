@@ -1,37 +1,33 @@
 import {
-  ActionIcon,
-  Alert,
-  Badge,
+  Accordion,
+  Anchor,
   Button,
+  Checkbox,
+  CheckboxGroup,
+  ColorInput,
+  ColorSwatch,
+  Combobox,
   createTheme,
+  Grid,
   Input,
   Menu,
+  NumberInput,
+  Pill,
   Radio,
   RadioCard,
   RadioIndicator,
   rem,
+  ScrollArea,
   SegmentedControl,
   Select,
+  Slider,
+  Switch,
+  Table,
   Tabs,
   Text,
   Tooltip,
-  Pill,
-  Combobox,
-  Accordion,
-  Table,
-  Slider,
-  Switch,
-  Checkbox,
-  CheckboxGroup,
-  NumberInput,
-  ColorSwatch,
-  ColorInput,
-  Anchor,
 } from '@mantine/core';
 import accordionClasses from './accordion.module.css';
-import actionIconClasses from './actionIcon.module.css';
-import alertClasses from './alert.module.css';
-import badgeClasses from './badge.module.css';
 import buttonClasses from './button.module.css';
 import checkboxClasses from './checkbox.module.css';
 import checkboxGroupClasses from './checkboxGroup.module.css';
@@ -49,11 +45,22 @@ import switchClasses from './switch.module.css';
 import tableClasses from './table.module.css';
 import tabsClasses from './tabs.module.css';
 import tooltipClasses from './tooltip.module.css';
-import { MantineTheme } from '@mantine/core';
-
 
 export const themeV7 = createTheme({
   components: {
+    ScrollArea: ScrollArea.extend({
+      defaultProps: {
+        styles: {
+          viewport: {
+            backgroundColor: '#F9FAFC',
+            marginTop: '2px',
+            borderRadius: '8px',
+            padding: '12px',
+          },
+        },
+      },
+    }),
+
     Anchor: Anchor.extend({
       defaultProps: {
         color: 'primary.4',
@@ -83,7 +90,7 @@ export const themeV7 = createTheme({
         me: rem(32),
       },
     }),
-   
+
     Input: Input.extend({
       classNames: inputClasses,
     }),
@@ -99,7 +106,7 @@ export const themeV7 = createTheme({
         variant: 'primary',
         size: 'md',
       },
-      vars: (theme: { fontSizes: { sm: any; md: any; }; }, { size }: any) => {
+      vars: (theme: { fontSizes: { sm: any; md: any } }, { size }: any) => {
         if (size === undefined) {
           return { root: {} };
         }
@@ -128,7 +135,9 @@ export const themeV7 = createTheme({
       defaultProps: {
         size: 'md',
       },
-      vars: (theme: { fontSizes: { sm: any; }; }) => ({ root: { '--sc-font-size': theme.fontSizes.sm } }),
+      vars: (theme: { fontSizes: { sm: any } }) => ({
+        root: { '--sc-font-size': theme.fontSizes.sm },
+      }),
     }),
     Tooltip: Tooltip.extend({
       classNames: tooltipClasses,
@@ -139,7 +148,7 @@ export const themeV7 = createTheme({
         multiline: true,
       },
     }),
-    
+
     ColorInput: ColorInput.extend({
       classNames: colorInputClasses,
     }),

@@ -1,5 +1,4 @@
 import { Button, Container, Flex, Tabs, Text } from '@mantine/core';
-import { utilityClasses } from '../Theme';
 
 function businessintelligence(): JSX.Element {
   return (
@@ -9,39 +8,49 @@ function businessintelligence(): JSX.Element {
       h={734}
       style={{ padding: '12px 24px 12px 24px' }}
     >
-      <Container w={677} h={58} p={0}>
-        <Text style={utilityClasses.sectionTitle}>Business Intelligence</Text>
-        <Text style={utilityClasses.bodyText}>
+      <Container w={677} h={58} p={0} m={0}>
+        <Text
+          style={{
+            fontFamily: 'Inter Variable',
+            fontWeight: '600',
+            fontStyle: 'SemiBold',
+            fontSize: '20px',
+            lineHeight: ' 100%',
+            letterSpacing: '0%',
+          }}
+        >
+          Business Intelligence
+        </Text>
+        <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </Text>
 
-        <Container
-          style={{ ...utilityClasses.featureContainer, position: 'relative', marginTop: '32px' }}
-        >
-          <Flex justify="space-between" align="flex-start">
-            <Container style={{ flex: 1 }}>
-              <Text w={607} style={{ ...utilityClasses.sectionTitle, marginLeft: '8px' }}>
+        <Container h={153} w={988} p={24} style={{ background: '#F9FAFC' }}>
+          <Flex justify="space-between" align="flex-start" p={0} m={0}>
+            <Container p={0} m={0} style={{ flex: 1 }}>
+              <Text
+                w={607}
+                style={{
+                  fontFamily: 'Inter Variable',
+                  fontWeight: '600',
+                  fontStyle: 'SemiBold',
+                  fontSize: '18px',
+                  lineHeight: ' 100%',
+                  letterSpacing: '0%',
+                }}
+              >
                 Business report
               </Text>
 
-              <Text style={{ ...utilityClasses.bodyText, marginLeft: '8px' }}>
+              <Text w={607}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                incididunt ut labore et dolore magna aliqua.
               </Text>
 
-              <Container style={{ marginLeft: '8px', marginTop: '8px' }}>
-                <Button
-                  style={{
-                    ...utilityClasses.accentButton,
-                    width: '89px',
-                    marginRight: '6px',
-                  }}
-                >
-                  Open
-                </Button>
+              <Container p={0} style={{ marginTop: '12px' }}>
+                <Button h={32}>Open</Button>
                 <Button
                   h={32}
                   w={125}
@@ -53,15 +62,22 @@ function businessintelligence(): JSX.Element {
               </Container>
             </Container>
 
-            <Container w={127} h={105} style={{ margin: 0, padding: '8px' }}>
-              <Text style={{ fontSize: '14px', fontWeight: '600', marginBottom: '8px' }}>
+            <Container w={127} h={105} style={{ marginRight: '12px' }}>
+              <Text
+                style={{
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  marginBottom: '8px',
+                  marginLeft: '12px',
+                }}
+              >
                 Examples
               </Text>
               <Container style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <Button h={32} w={125} style={{ ...utilityClasses.grayButtons }}>
+                <Button h={32} w={125}>
                   KYB report
                 </Button>
-                <Button h={32} w={125} style={{ ...utilityClasses.grayButtons }}>
+                <Button h={32} w={125}>
                   Business report
                 </Button>
               </Container>
@@ -69,23 +85,25 @@ function businessintelligence(): JSX.Element {
           </Flex>
         </Container>
 
-        <Container style={{ ...utilityClasses.featureContainer, marginTop: '12px' }}>
-          <Text style={{ ...utilityClasses.sectionTitle, marginLeft: '8px' }}>Company search</Text>
-          <Text style={{ ...utilityClasses.bodyText, marginLeft: '8px' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullambo laboris nisi ut aliquip ex ea commodo consequat.
+        <Container h={153} w={988} p={24} style={{ background: '#F9FAFC', marginTop: '12px' }}>
+          <Text
+            style={{
+              fontFamily: 'Inter Variable',
+              fontWeight: '600',
+              fontStyle: 'SemiBold',
+              fontSize: '18px',
+              lineHeight: ' 100%',
+              letterSpacing: '0%',
+            }}
+          >
+            Company search
           </Text>
-          <Container style={{ marginLeft: '8px', marginTop: '8px' }}>
-            <Button
-              style={{
-                ...utilityClasses.accentButton,
-                width: '89px',
-                marginRight: '6px',
-              }}
-            >
-              Open
-            </Button>
+          <Text w={607}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+          </Text>
+          <Container style={{ marginLeft: '8px', marginTop: '8px' }} p={0} m={0}>
+            <Button h={32}>Open</Button>
             <Button
               h={32}
               w={125}

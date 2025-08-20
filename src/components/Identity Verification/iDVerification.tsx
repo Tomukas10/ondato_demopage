@@ -11,22 +11,32 @@ import {
   Text,
 } from '@mantine/core';
 import ProductItem from '../productList';
-import { utilityClasses } from '../Theme';
-import '../Theme/accordion.module.css';
 
 function idVerification(): JSX.Element {
   return (
     <Tabs.Panel value="idVerification" w={1042} h={734} style={{ padding: '12px 24px 12px 24px' }}>
-      <Container w={677} p={0} m={0} style={{ marginBottom: '12px' }}>
-        <Text style={utilityClasses.sectionTitle}>Identity verification solutions</Text>
-        <Text style={utilityClasses.bodyText}>
+      <Container w={677} p={0} m={0}>
+        <Text style={{fontSize: '20px',
+                    fontWeight: '600',
+                    fontStyle: 'SemiBold',
+                    fontFamily: 'Inter Variable',
+                    letterSpacing: '0%',
+                    lineHeight: '100%',}}>
+          Identity verification solutions
+        </Text>
+        <Text style={{fontSize: '12px',
+                    fontWeight: '400',
+                    fontStyle: 'Regular',
+                    fontFamily: 'Inter Variable',
+                    letterSpacing: '0%',
+                    lineHeight: '100%',}}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </Text>
       </Container>
 
-      <Grid w={994} h={570} columns={3}>
+      <Grid w={994} h={616} columns={3}>
         <Grid.Col span={2}>
           <Text
             style={{
@@ -35,13 +45,12 @@ function idVerification(): JSX.Element {
               fontFamily: 'Inter Variable, sans-serif',
               lineHeight: 1,
               marginTop: '12px',
-              marginLeft: '5px',
               fontStyle: 'Semi Bold',
             }}
           >
             Solutions
           </Text>
-          <ScrollArea h={582} w={655} style={utilityClasses.contentCard}>
+          <ScrollArea h={616} w={655}>
             <SimpleGrid spacing="xs" verticalSpacing="md">
               <ProductItem isActive />
               <ProductItem isActive={false} />
@@ -59,9 +68,9 @@ function idVerification(): JSX.Element {
                 fontSize: '14px',
                 fontWeight: 400,
                 padding: '16px',
-                backgroundColor: '#B4B4B440',
+                backgroundColor: '#E6EBF0',
                 borderRadius: '4px',
-                marginTop: '44px',
+                marginTop: '33px',
                 marginBottom: '32px',
               }}
             >
@@ -82,9 +91,13 @@ function idVerification(): JSX.Element {
               Whitelabeling
             </Text>
 
-            <Container h={132} w={315} style={utilityClasses.infoCard} />
+            <Container
+              h={132}
+              w={315}
+              style={{ background: '#E6EBF0', marginBottom: '16px', borderRadius: '8px' }}
+            />
 
-            <Text style={{ ...utilityClasses.bodyText, marginTop: '24px' }}>
+            <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua:
             </Text>
@@ -103,10 +116,10 @@ function idVerification(): JSX.Element {
             <Text style={{ marginBottom: '8px' }}>Examples</Text>
 
             <Group>
-              <Button size="xs" variant="outline">
+              <Button size="xs" variant="outline" style={{ background: '#E6EBF0' }}>
                 Light mode
               </Button>
-              <Button size="xs" variant="outline">
+              <Button size="xs" variant="outline" style={{ background: '#E6EBF0' }}>
                 Dark mode
               </Button>
             </Group>
