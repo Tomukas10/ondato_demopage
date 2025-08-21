@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { Button, Container, Image, Modal, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useOndatoSdk, VerificationResult } from '@/sdk';
+import textClasses from '../components/Theme/text.module.css';
+
 
 const sdkID = '6267fcf5-fe32-4235-bc77-9e0d5ee326f0';
 
@@ -51,15 +53,15 @@ const ProductItem = ({ isActive }: { isActive: boolean }) => {
   return (
     <>
       <Modal opened={successOpened} onClose={closeSuccess} title="Verification Successful">
-        <Text>Your verification {verificationResult?.id} was completed successfully!</Text>
+        <Text className={textClasses.modaltext}>Your verification {verificationResult?.id} was completed successfully!</Text>
       </Modal>
 
       <Modal opened={failureOpened} onClose={closeFailure} title="Verification Failed">
-        <Text>Your verification {verificationResult?.id} failed. Please try again.</Text>
+        <Text className={textClasses.modalText}>Your verification {verificationResult?.id} failed. Please try again.</Text>
       </Modal>
 
       <Modal opened={closedOpened} onClose={closeClosed} title="Verification Closed">
-        <Text>You closed the verification {verificationResult?.id} before completing it.</Text>
+        <Text className={textClasses.modalText}>You closed the verification {verificationResult?.id} before completing it.</Text>
       </Modal>
 
       <Container

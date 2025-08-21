@@ -1,6 +1,8 @@
 import {
   Accordion,
   Anchor,
+  AppShell,
+  Box,
   Button,
   Checkbox,
   CheckboxGroup,
@@ -8,6 +10,7 @@ import {
   ColorSwatch,
   Combobox,
   createTheme,
+  Flex,
   Grid,
   Input,
   Menu,
@@ -45,9 +48,29 @@ import switchClasses from './switch.module.css';
 import tableClasses from './table.module.css';
 import tabsClasses from './tabs.module.css';
 import tooltipClasses from './tooltip.module.css';
+import bgImage from '../../assets/2def582a0161a731db4ed050ae500795814fe0b4.png';
+import textClasses from './text.module.css';
+
 
 export const themeV7 = createTheme({
   components: {
+
+    AppShell: AppShell.extend({
+      defaultProps: {},
+      styles: {
+        root: {
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          overflow: 'hidden',
+        },
+      },
+    }),
+
+   
+
+    
     ScrollArea: ScrollArea.extend({
       defaultProps: {
         styles: {
@@ -70,11 +93,17 @@ export const themeV7 = createTheme({
       defaultProps: {
         color: 'neutral.0',
       },
+      classNames: textClasses,
     }),
+
     Tabs: Tabs.extend({
       classNames: tabsClasses,
       defaultProps: {
-        color: 'secondary.4',
+        style: {
+        color: 'secondary.4', 
+        background: '#FFFFFF', 
+        borderRadius: '8px' 
+        },
       },
     }),
     TabsList: Tabs.List.extend({

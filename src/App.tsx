@@ -17,6 +17,8 @@ import customerDataPlatform from './components/CustomerDataPlatform/CustomerData
 import idVerificationTab from './components/Identity Verification/iDVerification';
 import { themeV7 } from './components/Theme/themeV7';
 import i18n from './translations';
+import textClasses from './components/Theme/text.module.css';
+
 
 export const AppNew = memo((): ReactElement => {
   // #############################################################################
@@ -24,15 +26,7 @@ export const AppNew = memo((): ReactElement => {
 
   function DemoPage() {
     return (
-      <AppShell
-        style={{
-          backgroundImage: 'url("src/assets/2def582a0161a731db4ed050ae500795814fe0b4.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          overflow: 'hidden',
-        }}
-      >
+      <AppShell>
         <Box
           style={{
             minHeight: '840px',
@@ -43,29 +37,19 @@ export const AppNew = memo((): ReactElement => {
             justifyContent: 'center',
           }}
         >
-          <Container w={1042} h={840} style={{ padding: '0' }}>
+          <Container w={1042} h={840}>
             <Flex style={{ alignItems: 'center' }} w={1042} h={41} justify="space-between">
               <Flex w={300} h={29} gap={28} style={{ alignItems: 'center' }}>
                 <Image w={135} h={29} src="src/assets/Ondato_logo.png" alt="Ondato Logo" />
-                <Text
+                <Text className={textClasses.root}
                   w={137}
-                  h={24}
-                  style={{
-                    fontSize: '20px',
-                    fontWeight: '600',
-                    fontStyle: 'SemiBold',
-                    fontFamily: 'Inter Variable',
-                    letterSpacing: '0%',
-                    lineHeight: '100%',
-                  }}
-                >
+                  h={24}>
                   Sales platform
                 </Text>
               </Flex>
               <Button style={{ background: '#B4B4B440' }}>Contact us</Button>
             </Flex>
 
-            {/* Tabs container */}
             <Box
               w={1042}
               style={{
@@ -74,15 +58,11 @@ export const AppNew = memo((): ReactElement => {
           0px 2px 4px rgba(76, 94, 123, 0.11),
           0px 7px 7px rgba(76, 94, 123, 0.10),
           0px 16px 10px rgba(76, 94, 123, 0.06),
-          0px 29px 12px rgba(76, 94, 123, 0.02)
-        `,
+          0px 29px 12px rgba(76, 94, 123, 0.02)`,
                 borderRadius: '8px',
               }}
             >
-              <Tabs
-                defaultValue="idVerification"
-                style={{ width: '100%', background: '#FFFFFF', borderRadius: '8px' }}
-              >
+              <Tabs defaultValue="idVerification">
                 <Tabs.List h={41}>
                   <Tabs.Tab value="idVerification" leftSection={<IconPhoto size={12} />}>
                     Identity verification

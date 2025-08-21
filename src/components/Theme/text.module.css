@@ -1,0 +1,48 @@
+.root {
+    font-size: 20px;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-family: "Inter Variable";
+    letter-spacing: 0%;
+    line-height: 100%;
+  }
+  
+  .descriptionText {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: SemiBold;
+    font-family: "Inter Variable";
+    letter-spacing: 0%;
+    line-height: 100%;
+  }
+
+  .secondaryText {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter Variable";
+    line-height: 1;
+    font-style: normal
+  }
+
+  .tertiaryText {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 16px;
+    background-color: #E6EBF0;
+    border-radius: 4px;
+    margin-top: 33px;
+    margin-bottom: 32px;
+  }
+
+  .examplesText {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: SemiBold;
+    font-family: "Inter Variable";
+    letter-spacing: 0%;
+    line-height: 100%;
+  }
+
+  .modalText {
+    font-size: 14px;
+  }
