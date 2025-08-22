@@ -68,9 +68,6 @@ export const themeV7 = createTheme({
       },
     }),
 
-   
-
-    
     ScrollArea: ScrollArea.extend({
       defaultProps: {
         styles: {
@@ -83,6 +80,7 @@ export const themeV7 = createTheme({
         },
       },
     }),
+    
 
     Anchor: Anchor.extend({
       defaultProps: {

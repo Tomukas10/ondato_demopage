@@ -6,7 +6,7 @@
 }
 
 .tab {
-  padding: rem(8px);
+  padding: 12px 24px 12px 24px;
 
   &:active,
   &:hover {

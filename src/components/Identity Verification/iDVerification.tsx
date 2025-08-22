@@ -12,11 +12,14 @@ import {
 } from '@mantine/core';
 import ProductItem from '../productList';
 import textClasses from '../Theme/text.module.css';
+import containerClasses from '../Theme/containers.module.css';
+import tabClasses from '../Theme/tabs.module.css';
+
 
 
 function idVerification(): JSX.Element {
   return (
-    <Tabs.Panel value="idVerification" w={1042} h={734} style={{ padding: '12px 24px 12px 24px' }}>
+    <Tabs.Panel value="idVerification" w={1042} h={734} className={tabClasses.tab}>
       <Container w={677} p={0} m={0}>
         <Text className={textClasses.root}>
           Identity verification solutions
@@ -54,34 +57,32 @@ function idVerification(): JSX.Element {
             <Text className={textClasses.secondaryText}>
               Whitelabeling
             </Text>
-            <Container
+            <Container className={containerClasses.default}
               h={132}
-              w={315}
-              style={{ background: '#E6EBF0', marginBottom: '16px', borderRadius: '8px' }}
-            />
-            <Text className={textClasses.descriptionText}>
+              w={315}/>
+            <Text className={textClasses.secondaryDescriptionText}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua:
             </Text>
 
-            <List>
-              <ListItem>Logo</ListItem>
+            <List className={textClasses.descriptionText}>
+              <ListItem >Logo</ListItem>
               <ListItem>Typography</ListItem>
               <ListItem>UI elements</ListItem>
               <ListItem>Illustrations</ListItem>
             </List>
 
-            <Button size="xs" variant="default" style={{ marginBottom: '24px', marginTop: '12px' }}>
+            <Button size="xs" variant="default" >
               More information
             </Button>
 
             <Text className={textClasses.examplesText}>Examples</Text>
 
-            <Group style={{marginTop:'8px'}}>
-              <Button size="xs" variant="outline" style={{ background: '#E6EBF0' }}>
+            <Group>
+              <Button size="xs" variant="secondary">
                 Light mode
               </Button>
-              <Button size="xs" variant="outline" style={{ background: '#E6EBF0' }}>
+              <Button size="xs" variant="secondary">
                 Dark mode
               </Button>
             </Group>
