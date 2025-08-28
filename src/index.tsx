@@ -1,8 +1,8 @@
 import '../index.css';
 
 import { createRoot } from 'react-dom/client';
+import { AppNew } from './app/app';
 
-import { AppNew } from './App';
 
 const container = document.getElementById('root');
 if (!container) {

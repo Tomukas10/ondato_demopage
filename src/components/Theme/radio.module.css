@@ -1,8 +1,0 @@
-.card[data-checked='true'] {
-  border-color: #ade374;
-  box-shadow: var(--mantine-shadow-xs);
-}
-
-.card[data-checked='true'] .mantine-Radio-label {
-  font-weight: 700;
-}

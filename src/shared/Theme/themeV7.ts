@@ -1,60 +1,10 @@
-import {
-  Accordion,
-  Anchor,
-  AppShell,
-  Box,
-  Button,
-  Checkbox,
-  CheckboxGroup,
-  ColorInput,
-  ColorSwatch,
-  Combobox,
-  createTheme,
-  Flex,
-  Grid,
-  Input,
-  Menu,
-  NumberInput,
-  Pill,
-  Radio,
-  RadioCard,
-  RadioIndicator,
-  rem,
-  ScrollArea,
-  SegmentedControl,
-  Select,
-  Slider,
-  Switch,
-  Table,
-  Tabs,
-  Text,
-  Tooltip,
-} from '@mantine/core';
-import accordionClasses from './accordion.module.css';
-import buttonClasses from './button.module.css';
-import checkboxClasses from './checkbox.module.css';
-import checkboxGroupClasses from './checkboxGroup.module.css';
-import colorInputClasses from './colorInput.module.css';
-import comboboxClasses from './combobox.module.css';
-import inputClasses from './input.module.css';
-import inputWrapperClasses from './inputWrapper.module.css';
-import menuClasses from './menu.module.css';
-import pillClasses from './pill.module.css';
-import radioClasses from './radio.module.css';
-import segmentedControlClasses from './segmentedControl.module.css';
-import selectClasses from './select.module.css';
-import sliderClasses from './slider.module.css';
-import switchClasses from './switch.module.css';
-import tableClasses from './table.module.css';
-import tabsClasses from './tabs.module.css';
-import tooltipClasses from './tooltip.module.css';
+import { AppShell, Button, createTheme, rem, Tabs, Text } from '@mantine/core';
 import bgImage from '../../assets/2def582a0161a731db4ed050ae500795814fe0b4.png';
-import textClasses from './text.module.css';
-
+import buttonClasses from './button.module.css';
+import tabsClasses from './tabs.module.css';
 
 export const themeV7 = createTheme({
   components: {
-
     AppShell: AppShell.extend({
       defaultProps: {},
       styles: {
@@ -68,39 +18,19 @@ export const themeV7 = createTheme({
       },
     }),
 
-    ScrollArea: ScrollArea.extend({
-      defaultProps: {
-        styles: {
-          viewport: {
-            backgroundColor: '#F9FAFC',
-            marginTop: '2px',
-            borderRadius: '8px',
-            padding: '12px',
-          },
-        },
-      },
-    }),
-    
-
-    Anchor: Anchor.extend({
-      defaultProps: {
-        color: 'primary.4',
-      },
-    }),
     Text: Text.extend({
       defaultProps: {
         color: 'neutral.0',
       },
-      classNames: textClasses,
     }),
 
     Tabs: Tabs.extend({
       classNames: tabsClasses,
       defaultProps: {
         style: {
-        color: 'secondary.4', 
-        background: '#FFFFFF', 
-        borderRadius: '8px' 
+          color: 'secondary.4',
+          background: '#FFFFFF',
+          borderRadius: '8px',
         },
       },
     }),
@@ -116,16 +46,6 @@ export const themeV7 = createTheme({
         pe: rem(6),
         me: rem(32),
       },
-    }),
-
-    Input: Input.extend({
-      classNames: inputClasses,
-    }),
-    InputWrapper: Input.Wrapper.extend({
-      classNames: inputWrapperClasses,
-    }),
-    Select: Select.extend({
-      classNames: selectClasses,
     }),
     Button: Button.extend({
       classNames: buttonClasses,
@@ -156,94 +76,6 @@ export const themeV7 = createTheme({
 
         return { root: {} };
       },
-    }),
-    SegmentedControl: SegmentedControl.extend({
-      classNames: segmentedControlClasses,
-      defaultProps: {
-        size: 'md',
-      },
-      vars: (theme: { fontSizes: { sm: any } }) => ({
-        root: { '--sc-font-size': theme.fontSizes.sm },
-      }),
-    }),
-    Tooltip: Tooltip.extend({
-      classNames: tooltipClasses,
-      defaultProps: {
-        withArrow: true,
-        arrowSize: 12,
-        p: 'md',
-        multiline: true,
-      },
-    }),
-
-    ColorInput: ColorInput.extend({
-      classNames: colorInputClasses,
-    }),
-    ColorSwatch: ColorSwatch.extend({
-      defaultProps: {
-        withShadow: false,
-      },
-    }),
-    Slider: Slider.extend({
-      classNames: sliderClasses,
-      defaultProps: {
-        labelAlwaysOn: true,
-        color: 'secondary.4',
-      },
-    }),
-    NumberInput: NumberInput.extend({
-      defaultProps: {
-        w: '80px',
-      },
-    }),
-    Menu: Menu.extend({
-      classNames: menuClasses,
-    }),
-    Checkbox: Checkbox.extend({
-      defaultProps: {
-        color: 'primary.6',
-        iconColor: 'neutral.0',
-      },
-      classNames: checkboxClasses,
-    }),
-    CheckboxGroup: CheckboxGroup.extend({
-      classNames: checkboxGroupClasses,
-    }),
-    Switch: Switch.extend({
-      classNames: switchClasses,
-      defaultProps: {
-        color: '#C6F77F',
-      },
-    }),
-    Radio: Radio.extend({
-      defaultProps: {
-        variant: 'outline',
-        color: '#C6F77F',
-      },
-    }),
-    RadioIndicator: RadioIndicator.extend({
-      defaultProps: {
-        variant: 'outline',
-        color: '#C6F77F',
-      },
-    }),
-    RadioCard: RadioCard.extend({
-      classNames: radioClasses,
-      defaultProps: {
-        p: 'lg',
-      },
-    }),
-    Table: Table.extend({
-      classNames: tableClasses,
-    }),
-    Pill: Pill.extend({
-      classNames: pillClasses,
-    }),
-    Combobox: Combobox.extend({
-      classNames: comboboxClasses,
-    }),
-    Accordion: Accordion.extend({
-      classNames: accordionClasses,
     }),
   },
   fontFamily: 'InterVariable, Arial, serif',
