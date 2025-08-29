@@ -11,11 +11,13 @@ import {
   Tabs,
   Title,
 } from '@mantine/core';
-import ProductItem from './productList';
+import { ProductItem } from './productList';
 
-function idVerification(): JSX.Element {
+const productData = [true, false, false, false, false];
+
+export function IdentityVerification(): JSX.Element {
   return (
-    <Tabs.Panel value="idVerification" w={1042} h={734} p={24}>
+    <Tabs.Panel value="IdentityVerification" w={1042} h={734} p={24}>
       <Flex direction={'column'} gap={8}>
         <Group gap={4} maw={670}>
           <Title order={4}>Identity verification solutions</Title>
@@ -25,31 +27,31 @@ function idVerification(): JSX.Element {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </Title>
         </Group>
-        <Title order={4} mb={'md'}>Solutions</Title>
+        <Title order={4} mb={'md'}>
+          Solutions
+        </Title>
       </Flex>
 
-      <Grid columns={3} >
+      <Grid columns={3}>
         <Grid.Col span={2}>
-          <ScrollArea 
+          <ScrollArea
             scrollbars="y"
             style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
             h={570}
-            p={24} 
+            p={24}
           >
             <SimpleGrid spacing="xs" verticalSpacing="xl">
-              <ProductItem isActive />
-              <ProductItem isActive={false} />
-              <ProductItem isActive={false} />
-              <ProductItem isActive={false} />
-              <ProductItem isActive={false} />
+              {productData.map((active, index) => (
+                <ProductItem key={index} isActive={active} />
+              ))}
             </SimpleGrid>
           </ScrollArea>
         </Grid.Col>
 
-        <Grid.Col span={1} >
+        <Grid.Col span={1}>
           <Group gap={25}>
-            <Container style={{ backgroundColor: '#F9FAFC', borderRadius:'8px' }}>
-              <Title order={5}>
+            <Container style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}>
+              <Title order={5} p={16}>
                 After identification is finished the client data can be found in Ondato OS(Customer
                 data platorm)
               </Title>
@@ -61,8 +63,7 @@ function idVerification(): JSX.Element {
                 h={132}
                 m={0}
                 style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
-              >
-              </Container>
+              ></Container>
               <Title order={6}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua:
@@ -98,5 +99,3 @@ function idVerification(): JSX.Element {
     </Tabs.Panel>
   );
 }
-
-export default idVerification;

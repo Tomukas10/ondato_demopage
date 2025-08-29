@@ -1,8 +1,6 @@
 import { Button, Grid, Group, Image, Title } from '@mantine/core';
 
-//const sdkID = '6267fcf5-fe32-4235-bc77-9e0d5ee326f0';
-
-const featureItem = () => {
+export function FeatureItem(): JSX.Element {
   return (
     <Grid columns={12}>
       <Grid.Col span={4}>
@@ -11,22 +9,18 @@ const featureItem = () => {
       <Grid.Col span={8}>
         <Group gap={8}>
           <Title order={5}>Feature name #1</Title>
-
           <Group gap={12}>
             <Title order={6}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             </Title>
-
             <Group gap={8}>
               <Button>Open</Button>
-              <Button variant='outline'>Start Idv</Button>
+              <Button variant="outline">Start Idv</Button>
             </Group>
           </Group>
         </Group>
       </Grid.Col>
     </Grid>
   );
-};
-
-export default featureItem;
+}

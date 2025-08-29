@@ -1,6 +1,6 @@
-import { Button, Container, Flex, Group, Tabs, Title } from '@mantine/core';
+import { Button, Flex, Group, Tabs, Title } from '@mantine/core';
 
-function businessintelligence(): JSX.Element {
+export function BusinessIntelligence(): JSX.Element {
   return (
     <Tabs.Panel value="businessInteligence" w={1042} h={734} p={24}>
       <Group gap={32}>
@@ -16,47 +16,43 @@ function businessintelligence(): JSX.Element {
           <Flex
             justify="space-between"
             align="center"
-            style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
             gap={8}
             p={24}
             w={988}
+            style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
           >
             <Group gap={12}>
               <Flex direction="column" gap={8}>
                 <Title order={4}>Business report</Title>
-
                 <Title order={6} w={650}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore magna aliqua.
                 </Title>
               </Flex>
-
               <Group>
                 <Button>Open</Button>
                 <Button variant="default">Documentation</Button>
               </Group>
             </Group>
-            <Flex direction={'column'} gap={12} w={127}>
-                <Title order={5}>Examples</Title>
-                  <Button variant='secondary'>KYB report</Button>
-                  <Button variant='secondary'>Business report</Button>
+            <Flex direction="column" gap={12} w={127}>
+              <Title order={5}>Examples</Title>
+              <Button variant="secondary">KYB report</Button>
+              <Button variant="secondary">Business report</Button>
             </Flex>
           </Flex>
 
           <Flex
             direction="column"
-            style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
             gap={12}
             p={24}
             w={988}
+            style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
           >
             <Title order={4}>Company Search</Title>
-
             <Title order={6} w={650}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             </Title>
-
             <Group>
               <Button>Open</Button>
               <Button variant="default">Documentation</Button>
@@ -67,5 +63,3 @@ function businessintelligence(): JSX.Element {
     </Tabs.Panel>
   );
 }
-
-export default businessintelligence;

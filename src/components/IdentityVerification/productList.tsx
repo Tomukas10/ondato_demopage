@@ -6,7 +6,11 @@ import { useOndatoSdk, VerificationResult } from '@/app/sdk';
 
 const sdkID = '6267fcf5-fe32-4235-bc77-9e0d5ee326f0';
 
-const ProductItem = ({ isActive }: { isActive: boolean }) => {
+interface ProductItemProps {
+  isActive: boolean;
+}
+
+export function ProductItem({ isActive }: ProductItemProps): JSX.Element {
   const { t } = useTranslation();
   const [successOpened, { open: openSuccess, close: closeSuccess }] = useDisclosure(false);
   const [failureOpened, { open: openFailure, close: closeFailure }] = useDisclosure(false);
@@ -32,20 +36,16 @@ const ProductItem = ({ isActive }: { isActive: boolean }) => {
   );
 
   const handleRunSdk = () => {
-    if (!isActive) {
-      return;
-    }
-    runSdk();
+    if (isActive) runSdk();
   };
 
   const handleOpenLink = () => {
-    if (!isActive) {
-      return;
+    if (isActive) {
+      window.open(
+        'https://ondato.atlassian.net/wiki/spaces/PUB/pages/3016392748/Web+SDK+integration',
+        '_blank'
+      );
     }
-    window.open(
-      'https://ondato.atlassian.net/wiki/spaces/PUB/pages/3016392748/Web+SDK+integration',
-      '_blank'
-    );
   };
 
   return (
@@ -69,33 +69,28 @@ const ProductItem = ({ isActive }: { isActive: boolean }) => {
       </Modal>
 
       <Grid columns={12}>
-        <Grid.Col span={2} >
+        <Grid.Col span={2}>
           <Image h={90} w={90} radius="md" src="src/assets/bg-placeholder.jpg" />
         </Grid.Col>
         <Grid.Col span={10}>
           <Group gap={8}>
             <Title order={5}>Product name #1</Title>
-
             <Group gap={12}>
               <Title order={6}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </Title>
-
               <Group gap={8}>
                 <Button onClick={handleRunSdk}>{t('homepage.OnAgeButton')}</Button>
                 <Button onClick={handleOpenLink} variant="default">
                   Start Idv
                 </Button>
               </Group>
-
             </Group>
           </Group>
         </Grid.Col>
       </Grid>
     </>
   );
-};
-
-export default ProductItem;
+}

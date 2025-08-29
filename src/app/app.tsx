@@ -5,22 +5,18 @@ import {
   AppShell,
   Box,
   Button,
-  Container,
   Flex,
   Group,
   Image,
   MantineProvider,
   Tabs,
-  Text,
   Title,
 } from '@mantine/core';
-
-import i18n from './translations';
-import businessintelligence from '@/components/BusinessIntelligence/BusinessIntelligence';
-import customerDataPlatform from '@/components/CustomerDataPlatform/CustomerDataPlatform';
-import idVerificationTab from '@/components/IdentityVerification/IdVerification';
+import { BusinessIntelligence } from '@/components/BusinessIntelligence/BusinessIntelligence';
+import { CustomerDataPlatform } from '@/components/CustomerDataPlatform/CustomerDataPlatform';
+import { IdentityVerification } from '@/components/IdentityVerification/IdentityVerification';
 import { themeV7 } from '@/shared/Theme/themeV7';
-
+import i18n from './translations';
 
 export const AppNew = memo((): ReactElement => {
   // #############################################################################
@@ -29,40 +25,37 @@ export const AppNew = memo((): ReactElement => {
   function DemoPage() {
     return (
       <AppShell>
-          <Group h={840} justify='center'>
-            <Flex w={1042} justify="space-between">
-              <Flex gap={28}>
-                <Image w={135} h={29} src="src/assets/Ondato_logo.png" alt="Ondato Logo" />
-                <Title order={4}>
-                  Sales platform
-                </Title>
-              </Flex>
-              <Button variant='secondary'>Contact us</Button>
+        <Group h={840} justify="center">
+          <Flex w={1042} justify="space-between">
+            <Flex gap={28}>
+              <Image w={135} h={29} src="src/assets/Ondato_logo.png" alt="Ondato Logo" />
+              <Title order={4}>Sales platform</Title>
             </Flex>
+            <Button variant="secondary">Contact us</Button>
+          </Flex>
 
-            <Box
-              w={1042}>
-              <Tabs defaultValue="idVerification">
-                <Tabs.List>
-                  <Tabs.Tab value="idVerification" leftSection={<IconPhoto size={12} />}>
-                    Identity verification
-                  </Tabs.Tab>
-                  <Tabs.Tab
-                    value="customerDataPlatform"
-                    leftSection={<IconMessageCircle size={12} />}
-                  >
-                    Customer data platform
-                  </Tabs.Tab>
-                  <Tabs.Tab value="businessInteligence" leftSection={<IconSettings size={12} />}>
-                    Business intelligence
-                  </Tabs.Tab>
-                </Tabs.List>
-                {idVerificationTab()}
-                {customerDataPlatform()}
-                {businessintelligence()}
-              </Tabs>
-            </Box>
-          </Group>
+          <Box w={1042}>
+            <Tabs defaultValue="IdentityVerification">
+              <Tabs.List>
+                <Tabs.Tab value="IdentityVerification" leftSection={<IconPhoto size={12} />}>
+                  Identity verification
+                </Tabs.Tab>
+                <Tabs.Tab
+                  value="customerDataPlatform"
+                  leftSection={<IconMessageCircle size={12} />}
+                >
+                  Customer data platform
+                </Tabs.Tab>
+                <Tabs.Tab value="businessInteligence" leftSection={<IconSettings size={12} />}>
+                  Business intelligence
+                </Tabs.Tab>
+              </Tabs.List>
+              {IdentityVerification()}
+              {CustomerDataPlatform()}
+              {BusinessIntelligence()}
+            </Tabs>
+          </Box>
+        </Group>
       </AppShell>
     );
   }
