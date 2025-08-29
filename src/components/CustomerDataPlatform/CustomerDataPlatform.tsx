@@ -10,7 +10,7 @@ import {
   Tabs,
   Title,
 } from '@mantine/core';
-import { FeatureItem } from './featureList';
+import { FeatureItem } from './FeatureList';
 
 const features = Array(5).fill(null);
 
