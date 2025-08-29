@@ -42,7 +42,7 @@ export const AppNew = memo((): ReactElement => {
 
             <Box
               w={1042}>
-              <Tabs defaultValue="customerDataPlatform">
+              <Tabs defaultValue="idVerification">
                 <Tabs.List>
                   <Tabs.Tab value="idVerification" leftSection={<IconPhoto size={12} />}>
                     Identity verification
