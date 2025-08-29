@@ -11,7 +11,7 @@ import {
   Tabs,
   Title,
 } from '@mantine/core';
-import { ProductItem } from './productList';
+import { ProductItem } from './ProductList';
 
 const productData = [true, false, false, false, false];
 
