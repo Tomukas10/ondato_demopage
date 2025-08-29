@@ -36,7 +36,7 @@ export const AppNew = memo((): ReactElement => {
 
           <Box w={1042}>
             <Tabs defaultValue="IdentityVerification">
-              <Tabs.List>
+              <Tabs.List ml={'xs'}>
                 <Tabs.Tab value="IdentityVerification" leftSection={<IconPhoto size={12} />}>
                   Identity verification
                 </Tabs.Tab>
