@@ -30,11 +30,11 @@ function idVerification(): JSX.Element {
 
       <Grid columns={3}>
         <Grid.Col span={2}>
-          <ScrollArea
-            h={580}
-            style={{ backgroundColor: 'lightGrey', borderRadius: '8px' }}
-            p={24}
+          <ScrollArea 
             scrollbars="y"
+            style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
+            h={580}
+            p={24} 
           >
             <SimpleGrid spacing="xs" verticalSpacing="xl">
               <ProductItem isActive />

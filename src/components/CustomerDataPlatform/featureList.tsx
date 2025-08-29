@@ -1,40 +1,31 @@
-import { Button, Container, Image, Title } from '@mantine/core';
+import { Button, Grid, Group, Image, Title } from '@mantine/core';
 
 //const sdkID = '6267fcf5-fe32-4235-bc77-9e0d5ee326f0';
 
 const featureItem = () => {
   return (
-    <Container h={116} w={607}>
-      <Image src="src/assets/bg-placeholder.jpg" h={90} w={90} />
+    <Grid columns={12}>
+      <Grid.Col span={4}>
+        <Image h={90} w={90} radius="md" src="src/assets/bg-placeholder.jpg" />
+      </Grid.Col>
+      <Grid.Col span={8}>
+        <Group gap={8}>
+          <Title order={5}>Feature name #1</Title>
 
-      <Container>
-        <Container>
-          <Title order={5}>Product name #1</Title>
-          <Title order={6}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </Title>
-        </Container>
+          <Group gap={12}>
+            <Title order={6}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </Title>
 
-        <Container>
-          <Button>
-            Open
-          </Button>
-          <Button
-            onClick={() =>
-              window.open(
-                'https://ondato.atlassian.net/wiki/spaces/PUB/pages/3016392748/Web+SDK+integration',
-                '_blank'
-              )
-            }
-            variant="default"
-          >
-            Documentation
-          </Button>
-        </Container>
-      </Container>
-    </Container>
+            <Group gap={8}>
+              <Button>Open</Button>
+              <Button variant='outline'>Start Idv</Button>
+            </Group>
+          </Group>
+        </Group>
+      </Grid.Col>
+    </Grid>
   );
 };
 
