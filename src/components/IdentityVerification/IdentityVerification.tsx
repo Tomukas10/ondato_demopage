@@ -18,7 +18,7 @@ const productData = [true, false, false, false, false];
 export function IdentityVerification(): JSX.Element {
   return (
     <Tabs.Panel value="IdentityVerification" w={1042} h={734} p={24}>
-      <Flex direction={'column'} gap={8}>
+      <Flex direction='column' gap={8}>
         <Group gap={4} maw={670}>
           <Title order={4}>Identity verification solutions</Title>
           <Title order={6}>
@@ -27,7 +27,7 @@ export function IdentityVerification(): JSX.Element {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </Title>
         </Group>
-        <Title order={4} mb={'md'}>
+        <Title order={4} mb='md'>
           Solutions
         </Title>
       </Flex>
@@ -56,19 +56,18 @@ export function IdentityVerification(): JSX.Element {
                 data platorm)
               </Title>
             </Container>
-            <Group gap={8} ml={'xs'}>
+            <Group gap={8} ml='xs'>
               <Title order={3}>Whitelabeling</Title>
               <Container
                 w={315}
                 h={132}
                 m={0}
-                style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
-              ></Container>
+                style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}></Container>
               <Title order={6}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua:
               </Title>
-              <Flex direction={'column'} gap={8}>
+              <Flex direction='column' gap={8}>
                 <List>
                   <ListItem>Logo</ListItem>
                   <ListItem>Typography</ListItem>
@@ -82,7 +81,7 @@ export function IdentityVerification(): JSX.Element {
               </Flex>
             </Group>
 
-            <Flex direction={'column'} gap={8} ml={'xs'}>
+            <Flex direction='column' gap={8} ml='xs'>
               <Title order={4}>Examples</Title>
               <Group>
                 <Button size="xs" variant="secondary">

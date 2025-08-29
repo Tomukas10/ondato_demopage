@@ -36,7 +36,9 @@ export function ProductItem({ isActive }: ProductItemProps): JSX.Element {
   );
 
   const handleRunSdk = () => {
-    if (isActive) runSdk();
+    if (isActive){
+      runSdk();
+    } 
   };
 
   const handleOpenLink = () => {
