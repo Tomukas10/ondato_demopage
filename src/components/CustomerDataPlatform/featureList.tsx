@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { Button, Grid, Group, Image, Title } from '@mantine/core';
 
 export function FeatureItem(): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <Grid columns={12}>
       <Grid.Col span={4}>
@@ -8,15 +11,12 @@ export function FeatureItem(): JSX.Element {
       </Grid.Col>
       <Grid.Col span={8}>
         <Group gap={8}>
-          <Title order={5}>Feature name #1</Title>
+          <Title order={5}>{t('FeatureList.Name')}</Title>
           <Group gap={12}>
-            <Title order={6}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
-            </Title>
+            <Title order={6}>{t('FeatureList.Description')}</Title>
             <Group gap={8}>
-              <Button>Open</Button>
-              <Button variant="outline">Start Idv</Button>
+              <Button>{t('Button.Open')}</Button>
+              <Button variant="outline">{t('Button.StartIdv')}</Button>
             </Group>
           </Group>
         </Group>

@@ -36,9 +36,9 @@ export function ProductItem({ isActive }: ProductItemProps): JSX.Element {
   );
 
   const handleRunSdk = () => {
-    if (isActive){
+    if (isActive) {
       runSdk();
-    } 
+    }
   };
 
   const handleOpenLink = () => {
@@ -76,17 +76,13 @@ export function ProductItem({ isActive }: ProductItemProps): JSX.Element {
         </Grid.Col>
         <Grid.Col span={10}>
           <Group gap={8}>
-            <Title order={5}>Product name #1</Title>
+            <Title order={5}>{t('Product.Name')}</Title>
             <Group gap={12}>
-              <Title order={6}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </Title>
+              <Title order={6}>{t('Product.Description')}</Title>
               <Group gap={8}>
-                <Button onClick={handleRunSdk}>{t('homepage.OnAgeButton')}</Button>
+                <Button onClick={handleRunSdk}>{t('Button.OnAge')}</Button>
                 <Button onClick={handleOpenLink} variant="default">
-                  Start Idv
+                  {t('Button.StartIdv')}
                 </Button>
               </Group>
             </Group>

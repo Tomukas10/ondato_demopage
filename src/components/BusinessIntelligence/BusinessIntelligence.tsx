@@ -1,16 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import { Button, Flex, Group, Tabs, Title } from '@mantine/core';
 
 export function BusinessIntelligence(): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <Tabs.Panel value="businessInteligence" w={1042} h={734} p={24}>
       <Group gap={32}>
         <Group gap={4} w={677}>
-          <Title order={4}>Business Intelligence</Title>
-          <Title order={6}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </Title>
+          <Title order={4}>{t('BusinessIntelligence.Title')}</Title>
+          <Title order={6}>{t('BusinessIntelligence.Description')}</Title>
         </Group>
         <Group gap={12}>
           <Flex
@@ -23,21 +22,20 @@ export function BusinessIntelligence(): JSX.Element {
           >
             <Group gap={12}>
               <Flex direction="column" gap={8}>
-                <Title order={4}>Business report</Title>
+                <Title order={4}>{t('BusinessIntelligenceReport.Title')}</Title>
                 <Title order={6} w={650}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua.
+                  {t('BusinessIntelligenceReport.Description')}
                 </Title>
               </Flex>
               <Group>
-                <Button>Open</Button>
-                <Button variant="default">Documentation</Button>
+                <Button>{t('Button.Open')}</Button>
+                <Button variant="default">{t('Button.Documentation')}</Button>
               </Group>
             </Group>
             <Flex direction="column" gap={12} w={127}>
-              <Title order={5}>Examples</Title>
-              <Button variant="secondary">KYB report</Button>
-              <Button variant="secondary">Business report</Button>
+              <Title order={5}>{t('Button.Examples')}</Title>
+              <Button variant="secondary">{t('Button.KYBReport')}</Button>
+              <Button variant="secondary">{t('Button.BusinessReport')}</Button>
             </Flex>
           </Flex>
 
@@ -48,14 +46,13 @@ export function BusinessIntelligence(): JSX.Element {
             w={988}
             style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
           >
-            <Title order={4}>Company Search</Title>
+            <Title order={4}>{t('BusinessIntelligenceSearch.Title')}</Title>
             <Title order={6} w={650}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              {t('BusinessIntelligenceSearch.Description')}
             </Title>
             <Group>
-              <Button>Open</Button>
-              <Button variant="default">Documentation</Button>
+              <Button>{t('Button.Open')}</Button>
+              <Button variant="default">{t('Button.Documentation')}</Button>
             </Group>
           </Flex>
         </Group>

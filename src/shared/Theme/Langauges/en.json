@@ -1,5 +1,51 @@
 {
-    "homepage": {
-      "OnAgeButton": "Start OnAge"
-    }
+  "Header.SalesPlatform": "Sales platform",
+  "Header.ContactUs": "Contact us",
+
+  "IdentityVerification.Tab": "Identity verification",
+  "CustomerDataPlatform.Tab": "Customer data platform",
+  "BusinessIntelligence.Tab": "Business Intelligence",
+
+  "IdentityVerification.Title": "Identity verification solutions",
+  "IdentityVerification.Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "IdentityVerification.Solutions": "Solutions",
+  "IdentityVerification.OndatoOSBanner": "After identification is finished the client data can be found in Ondato OS(Customer data platorm)",
+  "IdentityVerification.Whitelabeling": "Whitelabeling",
+  "IdentityVerification.WhiteLabelingDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua:",
+  "IdentityVerification.Examples": "Examples",
+  "IdentityVerification.LightMode": "Light mode",
+  "IdentityVerification.DarkMode": "Dark mode",
+  "IdentityVerificationList.Logo": "Logo",
+  "IdentityVerificationList.Typography": "Typography",
+  "IdentityVerificationList.UIElements": "UI Elements",
+  "IdentityVerificationList.Illustrations": "Illustrations",
+
+  "Product.Name": "Product name #1",
+  "Product.Description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+
+  "CustomerDataPlatform.Title": "Ondato OS - Customer data platform",
+  "CustomerDataPlatform.Description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+
+  "FeatureList.Title": "Feature List",
+  "FeatureList.Name": "Feature name #1",
+  "FeatureList.Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua.",
+
+  "BusinessIntelligence.Title": "Business Intelligence",
+  "BusinessIntelligence.Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "BusinessIntelligenceReport.Title": "Business Report",
+  "BusinessIntelligenceReport.Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "BusinessIntelligenceSearch.Title": "Comapany Search",
+  "BusinessIntelligenceSearch.Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+
+  "Button.StartIdv": "Start Idv",
+  "Button.OnAge": "Start OnAge",
+  "Button.MoreInformation": "More information",
+  "Button.Examples": "Examples",
+  "Button.LightMode": "Light Mode",
+  "Button.DarkMode": "Dark Mode",
+  "Button.CheckOutIdData": "Check out identification data",
+  "Button.KYBReport": "KYB report",
+  "Button.BusinessReport": "Business report",
+  "Button.Open": "Open",
+  "Button.Documentation": "Documentation"
 }

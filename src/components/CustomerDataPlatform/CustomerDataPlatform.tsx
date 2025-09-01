@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   Button,
   Flex,
@@ -14,19 +15,17 @@ import { FeatureItem } from './FeatureList';
 const features = Array(5).fill(null);
 
 export function CustomerDataPlatform(): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <Tabs.Panel value="customerDataPlatform" w={1042} h={734} p={24}>
       <Flex align="center" direction="row" gap={89}>
         <Group gap={4} w={677}>
-          <Title order={4}>Ondao OS - Customer data platform</Title>
-          <Title order={6}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </Title>
+          <Title order={4}>{t('CustomerDataPlatform.Title')}</Title>
+          <Title order={6}>{t('CustomerDataPlatform.Description')}</Title>
         </Group>
         <Button ml="xs">
-          <Title order={6}>Check out identification data</Title>
+          <Title order={6}>{t('Button.CheckOutIdData')}</Title>
         </Button>
       </Flex>
 
@@ -37,7 +36,7 @@ export function CustomerDataPlatform(): JSX.Element {
 
         <Grid.Col span={2}>
           <Group gap={12}>
-            <Title order={4}>Feature list</Title>
+            <Title order={4}>{t('FeatureList.Title')}</Title>
             <ScrollArea
               scrollbars="y"
               p={24}

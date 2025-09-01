@@ -1,6 +1,6 @@
 import { memo, ReactElement } from 'react';
 import { IconMessageCircle, IconPhoto, IconSettings } from '@tabler/icons-react';
-import { I18nextProvider } from 'react-i18next';
+import { I18nextProvider, useTranslation } from 'react-i18next';
 import {
   AppShell,
   Box,
@@ -22,6 +22,8 @@ export const AppNew = memo((): ReactElement => {
   // #############################################################################
   // #############################################################################
 
+  const { t } = useTranslation();
+
   function DemoPage() {
     return (
       <AppShell>
@@ -29,25 +31,25 @@ export const AppNew = memo((): ReactElement => {
           <Flex w={1042} justify="space-between">
             <Flex gap={28}>
               <Image w={135} h={29} src="src/assets/Ondato_logo.png" alt="Ondato Logo" />
-              <Title order={4}>Sales platform</Title>
+              <Title order={4}>{t('Header.SalesPlatform')}</Title>
             </Flex>
-            <Button variant="secondary">Contact us</Button>
+            <Button variant="secondary">{t('Header.ContactUs')}</Button>
           </Flex>
 
           <Box w={1042}>
             <Tabs defaultValue="IdentityVerification">
-              <Tabs.List ml='xs'>
+              <Tabs.List ml="xs">
                 <Tabs.Tab value="IdentityVerification" leftSection={<IconPhoto size={12} />}>
-                  Identity verification
+                  {t('IdentityVerification.Tab')}
                 </Tabs.Tab>
                 <Tabs.Tab
                   value="customerDataPlatform"
                   leftSection={<IconMessageCircle size={12} />}
                 >
-                  Customer data platform
+                  {t('CustomerDataPlatform.Tab')}
                 </Tabs.Tab>
                 <Tabs.Tab value="businessInteligence" leftSection={<IconSettings size={12} />}>
-                  Business intelligence
+                  {t('BusinessIntelligence.Tab')}
                 </Tabs.Tab>
               </Tabs.List>
               {IdentityVerification()}
