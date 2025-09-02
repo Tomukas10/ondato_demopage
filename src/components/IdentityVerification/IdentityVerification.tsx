@@ -49,7 +49,11 @@ export function IdentityVerification(): JSX.Element {
 
         <Grid.Col span={1}>
           <Group gap={25}>
-            <Container style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}>
+            <Container
+              w={315}
+              ml={'xs'}
+              style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
+            >
               <Title order={5} p={16}>
                 {t('IdentityVerification.OndatoOSBanner')}
               </Title>
@@ -59,10 +63,9 @@ export function IdentityVerification(): JSX.Element {
               <Container
                 w={315}
                 h={132}
-                m={0}
                 style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
               ></Container>
-              <Title order={6}>{t('IdentityVerification.WhitelabelingDescription')}</Title>
+              <Title order={6}>{t('IdentityVerification.WhiteLabelingDescription')}</Title>
               <Flex direction="column" gap={8}>
                 <List>
                   <ListItem>{t('IdentityVerificationList.Logo')}</ListItem>

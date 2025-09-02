@@ -19,9 +19,6 @@ import { themeV7 } from '@/shared/Theme/themeV7';
 import i18n from './translations';
 
 export const AppNew = memo((): ReactElement => {
-  // #############################################################################
-  // #############################################################################
-
   const { t } = useTranslation();
 
   function DemoPage() {
@@ -61,10 +58,7 @@ export const AppNew = memo((): ReactElement => {
       </AppShell>
     );
   }
-
-  // #############################################################################
-  // #############################################################################
-
+  
   return (
     <I18nextProvider i18n={i18n}>
       <MantineProvider theme={themeV7}>
