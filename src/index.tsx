@@ -1,7 +1,7 @@
 import '../index.css';
 
 import { createRoot } from 'react-dom/client';
-import { AppNew } from './app/app';
+import { DemoPageRun } from './DemoPage/DemoPageRun';
 
 const container = document.getElementById('root');
 if (!container) {
@@ -9,4 +9,4 @@ if (!container) {
 }
 
 const root = createRoot(container);
-root.render(<AppNew />);
+root.render(<DemoPageRun />);

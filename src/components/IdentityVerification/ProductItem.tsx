@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, Grid, Group, Image, Modal, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { useOndatoSdk, VerificationResult } from '@/app/sdk';
+import { useOndatoSdk, VerificationResult } from '@/DemoPage/sdk';
 
 const sdkID = '6267fcf5-fe32-4235-bc77-9e0d5ee326f0';
 
