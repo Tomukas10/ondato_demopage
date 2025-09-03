@@ -7,7 +7,7 @@ export function FeatureItem(): JSX.Element {
   return (
     <Grid columns={12}>
       <Grid.Col span={4}>
-        <Image h={90} w={90} radius="md" src="src/assets/bg-placeholder.jpg" />
+        <Image h={90} w={90} radius="md" src="src/assets/ProductPlaceholder.jpg" />
       </Grid.Col>
       <Grid.Col span={8}>
         <Group gap={8}>

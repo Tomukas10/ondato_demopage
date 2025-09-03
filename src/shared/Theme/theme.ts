@@ -1,9 +1,9 @@
 import { AppShell, Button, createTheme, rem, Tabs, Text } from '@mantine/core';
-import bgImage from '../../assets/2def582a0161a731db4ed050ae500795814fe0b4.png';
+import bgImage from '../../assets/backround.png';
 import buttonClasses from './button.module.css';
 import tabsClasses from './tabs.module.css';
 
-export const themeV7 = createTheme({
+export const theme = createTheme({
   components: {
     AppShell: AppShell.extend({
       defaultProps: {},

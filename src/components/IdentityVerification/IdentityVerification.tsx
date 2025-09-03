@@ -12,9 +12,17 @@ import {
   Tabs,
   Title,
 } from '@mantine/core';
-import { ProductItem } from './ProductList';
+import { ProductItem } from './ProductItem';
 
-const productData = [true, false, false, false, false];
+import '../../shared/component.css';
+
+const productData = [
+  { id: 1, isActive: true },
+  { id: 2, isActive: false },
+  { id: 3, isActive: false },
+  { id: 4, isActive: false },
+  { id: 5, isActive: false },
+];
 
 export function IdentityVerification(): JSX.Element {
   const { t } = useTranslation();
@@ -33,15 +41,10 @@ export function IdentityVerification(): JSX.Element {
 
       <Grid columns={3}>
         <Grid.Col span={2}>
-          <ScrollArea
-            scrollbars="y"
-            style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
-            h={570}
-            p={24}
-          >
+          <ScrollArea className="misc" scrollbars="y" h={570} p={24}>
             <SimpleGrid spacing="xs" verticalSpacing="xl">
-              {productData.map((active, index) => (
-                <ProductItem key={index} isActive={active} />
+              {productData.map((item) => (
+                <ProductItem key={item.id} isActive={item.isActive} />
               ))}
             </SimpleGrid>
           </ScrollArea>
@@ -49,22 +52,14 @@ export function IdentityVerification(): JSX.Element {
 
         <Grid.Col span={1}>
           <Group gap={25}>
-            <Container
-              w={315}
-              ml={'xs'}
-              style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
-            >
+            <Container className="misc" w={315} ml="xs">
               <Title order={5} p={16}>
                 {t('IdentityVerification.OndatoOSBanner')}
               </Title>
             </Container>
             <Group gap={8} ml="xs">
               <Title order={3}>{t('IdentityVerification.Whitelabeling')}</Title>
-              <Container
-                w={315}
-                h={132}
-                style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
-              ></Container>
+              <Container className="misc" w={315} h={132} />
               <Title order={6}>{t('IdentityVerification.WhiteLabelingDescription')}</Title>
               <Flex direction="column" gap={8}>
                 <List>

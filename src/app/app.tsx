@@ -15,7 +15,7 @@ import {
 import { BusinessIntelligence } from '@/components/BusinessIntelligence/BusinessIntelligence';
 import { CustomerDataPlatform } from '@/components/CustomerDataPlatform/CustomerDataPlatform';
 import { IdentityVerification } from '@/components/IdentityVerification/IdentityVerification';
-import { themeV7 } from '@/shared/Theme/themeV7';
+import { theme } from '@/shared/Theme/theme';
 import i18n from './translations';
 
 export const AppNew = memo((): ReactElement => {
@@ -58,10 +58,10 @@ export const AppNew = memo((): ReactElement => {
       </AppShell>
     );
   }
-  
+
   return (
     <I18nextProvider i18n={i18n}>
-      <MantineProvider theme={themeV7}>
+      <MantineProvider theme={theme}>
         <DemoPage />
       </MantineProvider>
     </I18nextProvider>
