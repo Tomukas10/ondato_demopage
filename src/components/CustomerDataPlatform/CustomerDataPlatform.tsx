@@ -15,11 +15,11 @@ import { FeatureItem } from './FeatureItem';
 import '../../shared/component.css';
 
 const features = [
-  { id: 1, value: null },
-  { id: 2, value: null },
-  { id: 3, value: null },
-  { id: 4, value: null },
-  { id: 5, value: null },
+  { onAge: 1, idv: null },
+  { onAge: 2, idv: null },
+  { onAge: 3, idv: null },
+  { onAge: 4, idv: null },
+  { onAge: 5, idv: null },
 ];
 
 export function CustomerDataPlatform(): JSX.Element {
@@ -45,7 +45,7 @@ export function CustomerDataPlatform(): JSX.Element {
         <Grid.Col span={2}>
           <Group gap={12}>
             <Title order={4}>{t('FeatureList.Title')}</Title>
-            <ScrollArea className="misc" scrollbars="y" p={24} h={582} w={371}>
+            <ScrollArea className="misc" scrollbars="y" p={24} mah={582} maw={371}>
               <SimpleGrid spacing="xs" verticalSpacing="md">
                 {features.map((_, index) => (
                   <FeatureItem key={index} />

@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, Grid, Group, Image, Modal, Title } from '@mantine/core';
+
 import { useDisclosure } from '@mantine/hooks';
 import { useOndatoSdk, VerificationResult } from '@/DemoPage/sdk';
 

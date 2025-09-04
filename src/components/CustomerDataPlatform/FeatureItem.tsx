@@ -16,7 +16,7 @@ export function FeatureItem(): JSX.Element {
             <Title order={6}>{t('FeatureList.Description')}</Title>
             <Group gap={8}>
               <Button>{t('Button.Open')}</Button>
-              <Button variant="outline">{t('Button.StartIdv')}</Button>
+              <Button variant="outline">{t('Button.Documentation')}</Button>
             </Group>
           </Group>
         </Group>

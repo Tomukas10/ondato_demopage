@@ -1,10 +1,10 @@
+import { AppShell, Group, Flex, Title, Button, Box, Tabs, Image } from "@mantine/core";
+import { IconPhoto, IconMessageCircle, IconSettings } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
+
 import { BusinessIntelligence } from "@/components/BusinessIntelligence/BusinessIntelligence";
 import { CustomerDataPlatform } from "@/components/CustomerDataPlatform/CustomerDataPlatform";
 import { IdentityVerification } from "@/components/IdentityVerification/IdentityVerification";
-import { AppShell, Group, Flex, Title, Button, Box, Tabs, Image } from "@mantine/core";
-import { IconPhoto, IconMessageCircle, IconSettings } from "@tabler/icons-react";
-import { t } from "i18next";
-import { useTranslation } from "react-i18next";
 
 export function DemoPage(): JSX.Element { 
   const { t } = useTranslation();

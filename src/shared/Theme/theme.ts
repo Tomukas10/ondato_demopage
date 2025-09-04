@@ -1,4 +1,5 @@
 import { AppShell, Button, createTheme, rem, Tabs, Text } from '@mantine/core';
+
 import bgImage from '../../assets/backround.png';
 import buttonClasses from './button.module.css';
 import tabsClasses from './tabs.module.css';

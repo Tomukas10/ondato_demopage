@@ -12,16 +12,17 @@ import {
   Tabs,
   Title,
 } from '@mantine/core';
+
 import { ProductItem } from './ProductItem';
 
 import '../../shared/component.css';
 
 const productData = [
-  { id: 1, isActive: true },
-  { id: 2, isActive: false },
-  { id: 3, isActive: false },
-  { id: 4, isActive: false },
-  { id: 5, isActive: false },
+  { feature: 1, idv: true },
+  { feature: 2, idv: true },
+  { feature: 3, idv: true },
+  { feature: 4, idv: true },
+  { feature: 5, idv: true },
 ];
 
 export function IdentityVerification(): JSX.Element {
@@ -44,7 +45,7 @@ export function IdentityVerification(): JSX.Element {
           <ScrollArea className="misc" scrollbars="y" h={570} p={24}>
             <SimpleGrid spacing="xs" verticalSpacing="xl">
               {productData.map((item) => (
-                <ProductItem key={item.id} isActive={item.isActive} />
+                <ProductItem key={item.feature} isActive={item.idv} />
               ))}
             </SimpleGrid>
           </ScrollArea>

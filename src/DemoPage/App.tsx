@@ -1,11 +1,11 @@
-import { theme } from '@/shared/Theme/theme';
-import {
-  MantineProvider
-} from '@mantine/core';
+import { MantineProvider} from '@mantine/core';
 import { memo, ReactElement } from 'react';
 import { I18nextProvider } from 'react-i18next';
-import i18n from './translations';
+import { theme } from '@/shared/Theme/theme';
 import { DemoPage } from './DemoPage';
+
+import i18n from './translations';
+
 
 export const DemoPageRun = memo((): ReactElement => {
   return (
