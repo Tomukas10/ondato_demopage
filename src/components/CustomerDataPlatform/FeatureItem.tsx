@@ -7,7 +7,7 @@ export function FeatureItem(): JSX.Element {
   return (
     <Grid columns={12}>
       <Grid.Col span={4}>
-        <Image h={90} w={90} radius="md" src="src/assets/bg-placeholder.jpg" />
+        <Image h={90} w={90} radius="md" src="src/assets/ProductPlaceholder.jpg" />
       </Grid.Col>
       <Grid.Col span={8}>
         <Group gap={8}>
@@ -16,7 +16,7 @@ export function FeatureItem(): JSX.Element {
             <Title order={6}>{t('FeatureList.Description')}</Title>
             <Group gap={8}>
               <Button>{t('Button.Open')}</Button>
-              <Button variant="outline">{t('Button.StartIdv')}</Button>
+              <Button variant="outline">{t('Button.Documentation')}</Button>
             </Group>
           </Group>
         </Group>

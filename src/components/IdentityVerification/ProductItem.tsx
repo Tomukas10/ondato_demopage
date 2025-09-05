@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, Grid, Group, Image, Modal, Title } from '@mantine/core';
+
 import { useDisclosure } from '@mantine/hooks';
-import { useOndatoSdk, VerificationResult } from '@/app/sdk';
+import { useOndatoSdk, VerificationResult } from '@/DemoPage/sdk';
 
 const sdkID = '6267fcf5-fe32-4235-bc77-9e0d5ee326f0';
 
@@ -35,11 +36,11 @@ export function ProductItem({ isActive }: ProductItemProps): JSX.Element {
     }
   );
 
-  const handleRunSdk = () => {
+  const handleRunSdk = useCallback(() => {
     if (isActive) {
       runSdk();
     }
-  };
+  }, [isActive, runSdk]);
 
   const handleOpenLink = () => {
     if (isActive) {
@@ -72,7 +73,7 @@ export function ProductItem({ isActive }: ProductItemProps): JSX.Element {
 
       <Grid columns={12}>
         <Grid.Col span={2}>
-          <Image h={90} w={90} radius="md" src="src/assets/bg-placeholder.jpg" />
+          <Image h={90} w={90} radius="md" src="src/assets/ProductPlaceholder.jpg" />
         </Grid.Col>
         <Grid.Col span={10}>
           <Group gap={8}>

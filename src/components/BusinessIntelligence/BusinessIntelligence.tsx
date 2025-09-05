@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Button, Flex, Group, Tabs, Title } from '@mantine/core';
 
+import '@/shared/component.css';
+
 export function BusinessIntelligence(): JSX.Element {
   const { t } = useTranslation();
 
@@ -12,14 +14,7 @@ export function BusinessIntelligence(): JSX.Element {
           <Title order={6}>{t('BusinessIntelligence.Description')}</Title>
         </Group>
         <Group gap={12}>
-          <Flex
-            justify="space-between"
-            align="center"
-            gap={8}
-            p={24}
-            w={988}
-            style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
-          >
+          <Flex className="misc" justify="space-between" align="center" gap={8} p={24}>
             <Group gap={12}>
               <Flex direction="column" gap={8}>
                 <Title order={4}>{t('BusinessIntelligenceReport.Title')}</Title>
@@ -39,15 +34,9 @@ export function BusinessIntelligence(): JSX.Element {
             </Flex>
           </Flex>
 
-          <Flex
-            direction="column"
-            gap={12}
-            p={24}
-            w={988}
-            style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
-          >
+          <Flex className="misc" direction="column" gap={12} p={24} w={994}>
             <Title order={4}>{t('BusinessIntelligenceSearch.Title')}</Title>
-            <Title order={6} w={650}>
+            <Title order={6} maw={650}>
               {t('BusinessIntelligenceSearch.Description')}
             </Title>
             <Group>

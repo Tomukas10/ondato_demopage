@@ -10,9 +10,17 @@ import {
   Tabs,
   Title,
 } from '@mantine/core';
-import { FeatureItem } from './FeatureList';
+import { FeatureItem } from './FeatureItem';
 
-const features = Array(5).fill(null);
+import '../../shared/component.css';
+
+const features = [
+  { onAge: 1, idv: null },
+  { onAge: 2, idv: null },
+  { onAge: 3, idv: null },
+  { onAge: 4, idv: null },
+  { onAge: 5, idv: null },
+];
 
 export function CustomerDataPlatform(): JSX.Element {
   const { t } = useTranslation();
@@ -31,19 +39,13 @@ export function CustomerDataPlatform(): JSX.Element {
 
       <Grid columns={5} mt="md">
         <Grid.Col span={3} mt="xl">
-          <Image src="./src/assets/d456eaab86213f569834005ce2e9ac77b473b657.png" />
+          <Image src="./src/assets/CustomerPlatformDemoImage.png" />
         </Grid.Col>
 
         <Grid.Col span={2}>
           <Group gap={12}>
             <Title order={4}>{t('FeatureList.Title')}</Title>
-            <ScrollArea
-              scrollbars="y"
-              p={24}
-              h={582}
-              w={371}
-              style={{ backgroundColor: '#F9FAFC', borderRadius: '8px' }}
-            >
+            <ScrollArea className="misc" scrollbars="y" p={24} mah={582} maw={371}>
               <SimpleGrid spacing="xs" verticalSpacing="md">
                 {features.map((_, index) => (
                   <FeatureItem key={index} />
